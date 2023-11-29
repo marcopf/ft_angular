@@ -1,6 +1,7 @@
 export default class Aview{
     constructor(){
-
+        this.needListener   = false;
+        this.listenerId     = "";
     }
     getHtml(){
 
@@ -10,5 +11,11 @@ export default class Aview{
     }
     getHeader(path){
         return (`<link rel="stylesheet" href="` + path + `">\n`)
+    }
+    getInput(){
+        let values = {};
+        for (let inp of document.querySelectorAll(".data"))
+            values[inp.name] = inp.value;
+        return values;
     }
 }
