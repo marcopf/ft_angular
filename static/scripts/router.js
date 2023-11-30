@@ -20,6 +20,5 @@ window.addEventListener("popstate", Router);
 
 addEventListener("DOMContentLoaded", (event) => {
 	styleH.loadStyles();
-	console.log(document.styleSheets)
 	Router();
 });

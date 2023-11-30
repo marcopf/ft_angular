@@ -7,7 +7,6 @@ export function disableStyleSheet(fRoute)
 		if (fRoute != 0 && style.href.indexOf(fRoute.style) != -1)
 			style.disabled = true;
 	}
-	console.log(document.querySelectorAll("cssView"))
 }
 
 export function enableStyleSheet(fRoute)

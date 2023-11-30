@@ -28,16 +28,16 @@ const Router =()=>{
 	document.querySelector("#app").innerHTML = "";
 	setTimeout(() => {
 		document.querySelector("#app").innerHTML = matechedLocation.getHtml();
+		if (matechedLocation.needListener)
+		{
+			document.querySelector("#" + matechedLocation.listenerId).addEventListener("click", ()=>{
+				console.log(matechedLocation.getInput());
+			})
+		}
+		matechedLocation.setBackground();
 	}, 50);
-	matechedLocation.setBackground();
 	
 	//setup the listener for submit button
-	if (matechedLocation.needListener)
-	{
-		document.querySelector("#" + matechedLocation.listenerId).addEventListener("click", ()=>{
-			console.log(matechedLocation.getInput());
-		})
-	}
 }
 
 export default Router
